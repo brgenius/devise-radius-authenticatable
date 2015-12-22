@@ -263,13 +263,20 @@ Devise.setup do |config|
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
   config.warden do |warden_config|
-    warden_config.default_strategies(:token_authenticatable,
-                                     :database_authenticatable,
+    warden_config.default_strategies(:database_authenticatable,
                                      :radius_authenticatable,
                                      {:scope => :admin})
   end
+  config.secret_key = 'bf2b0e5c0341c771f9e898a4617346206989f8fc7a6a841c0e8b966b45d4c474b92bcd08d2ad030fe10656ab2557bfd062adeea70a4d742621a177da9d098732'
 
-  # ==> Mountable engine configurations
+  #config.token_authentication_key = :other_key_name
+
+  # enable reset of the authentication token before the model is saved,
+  # defaults to false
+
+  # enables the setting of the authentication token - if not already - before the model is saved,
+  # defaults to false
+    # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
   # is mountable, there are some extra configurations to be taken into account.
   # The following options are available, assuming the engine is mounted as:

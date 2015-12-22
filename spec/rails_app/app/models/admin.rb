@@ -1,5 +1,5 @@
 class Admin < ActiveRecord::Base
-  devise :database_authenticatable, :token_authenticatable, :radius_authenticatable
+  devise :database_authenticatable, :radius_authenticatable
 
   attr_accessor :login
 

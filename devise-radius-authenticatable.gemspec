@@ -17,9 +17,9 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- spec/*`.split("\n")
   s.require_paths = ["lib"]
 
-  s.add_dependency('devise', '~> 2.0')
+  s.add_dependency('devise')
   s.add_dependency('radiustar', '~> 0.0.8')
-
+  
   s.add_development_dependency('rake', '~> 0.9')
   s.add_development_dependency('rails', '~> 3.2')
   s.add_development_dependency('jquery-rails', '~> 2.0')

@@ -10,6 +10,7 @@ class Configurable < Admin
          },
          :radius_dictionary_path => Rails.root.join('config/dictionaries'),
          :handle_radius_timeout_as_failure => true)
+
 end
 
 describe Devise::Models::RadiusAuthenticatable do
